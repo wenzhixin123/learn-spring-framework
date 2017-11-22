@@ -1,3 +1,6 @@
+package com.wangpai.wms.controller;
+
+import com.wangpai.wms.util.CommonUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -23,6 +26,10 @@ public class HelloWorldServlet extends HttpServlet{
         logger.info("hhhhhhhhhhhhhhhhhhhhhhhh=====================================================");
         logger.info("hhhhhhhhhhhhhhhhhhhhhhhh=====================================================");
         logger.info("hhhhhhhhhhhhhhhhhhhhhhhh=====================================================");
+
+        CommonUtil commonUtil = (x,y) -> x + y;
+        System.out.println(commonUtil.caculateVal(2,3));
+
 
         DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         String currentDate = dateFormat.format(new Date());
